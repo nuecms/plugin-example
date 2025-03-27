@@ -1,0 +1,12 @@
+{
+  "key": "example",
+  "name": "Example Plugin",
+  "description": "An example plugin to demonstrate the plugin system",
+  "version": "1.0.0",
+  "author": "NueCMS",
+  "config": {
+    "setting1": "value1",
+    "enableFeature": true,
+    "maxItems": 10
+  }
+}
