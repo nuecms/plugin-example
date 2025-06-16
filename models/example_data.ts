@@ -40,13 +40,13 @@ export default function (sequelize: Sequelize, DataTypes: typeof SequelizeDataTy
       created_at: {
         type: DataTypes.DATE,
         allowNull: false,
-        defaultValue: Sequelize.Sequelize.literal('CURRENT_TIMESTAMP'),
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
         comment: '创建时间'
       },
       updated_at: {
         type: DataTypes.DATE,
         allowNull: false,
-        defaultValue: Sequelize.Sequelize.literal('CURRENT_TIMESTAMP'),
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
         comment: '更新时间'
       }
     },

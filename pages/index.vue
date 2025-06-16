@@ -3,23 +3,17 @@
     <h1>Example Plugin</h1>
     <p>This is a sample page from the example plugin</p>
 
-    <div v-if="loading" class="loading">
-      Loading data...
-    </div>
+    <div v-if="loading" class="loading">Loading data...</div>
 
     <div v-else-if="data.length" class="data-list">
       <div v-for="item in data" :key="item.id" class="data-item">
         <h3>{{ item.title }}</h3>
         <p>{{ item.content }}</p>
-        <div class="meta">
-          Created: {{ formatDate(item.created_at) }}
-        </div>
+        <div class="meta">Created: {{ formatDate(item.created_at) }}</div>
       </div>
     </div>
 
-    <div v-else class="empty-state">
-      No data found
-    </div>
+    <div v-else class="empty-state">No data found</div>
   </div>
 </template>
 
@@ -88,7 +82,8 @@ onMounted(() => {
   margin-top: 10px;
 }
 
-.loading, .empty-state {
+.loading,
+.empty-state {
   padding: 40px;
   text-align: center;
   color: #666;

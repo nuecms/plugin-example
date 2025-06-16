@@ -36,7 +36,7 @@
 }
 
 .plugin-header {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 1rem 0;
 }

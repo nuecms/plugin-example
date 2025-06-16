@@ -1,24 +1,21 @@
 import { Op } from 'sequelize'
-import models, { sequelize } from '@models'
+import models from '@models'
 import useLog from '@core/logger'
-import { Auth, Perm, Schema, Summary, CTags } from '@server/decorators'
-import { Res, Req, Controller, Post, Get, Put, Delete, Params, Query, Body } from '@server/decorators'
+import { Auth, Summary, CTags } from '@server/decorators'
+import { Plugin } from '@server/decorators/plugin'
+import { Res, Req, Controller, Post, Get, Params, Query, Body } from '@server/decorators'
 
 const log = useLog('example-plugin')
 
 @Controller('/example')
 @CTags('Example Plugin')
+@Plugin('example') // Add the Plugin decorator with the plugin key
 export class ExampleController {
   @Get('/')
   @Summary('获取示例数据列表')
   public async getList(@Query() query: any, @Res() res: any) {
     try {
-      const {
-        page = 1,
-        pageSize = 10,
-        status,
-        keyword
-      } = query
+      const { page = 1, pageSize = 10, status, keyword } = query
 
       const where: any = {}
 

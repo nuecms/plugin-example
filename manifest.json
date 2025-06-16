@@ -4,6 +4,7 @@
   "description": "An example plugin to demonstrate the plugin system",
   "version": "1.0.0",
   "author": "NueCMS",
+  "icon": "./example-icon.svg",
   "config": {
     "setting1": "value1",
     "enableFeature": true,

@@ -4,15 +4,15 @@
     <div class="content">
       <slot></slot>
     </div>
-    <div class="footer" v-if="showFooter">
-      <button @click="handleClick" class="btn">{{ buttonText }}</button>
+    <div v-if="showFooter" class="footer">
+      <button class="btn" @click="handleClick">
+        {{ buttonText }}
+      </button>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, defineProps, defineEmits } from 'vue'
-
 const props = defineProps({
   title: {
     type: String,
@@ -61,7 +61,7 @@ const handleClick = () => {
 
 .btn {
   padding: 5px 15px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 4px;
